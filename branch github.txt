@@ -1,0 +1,144 @@
+arunk@DESKTOP-F9U8PUD MINGW64 /d/Calculator
+$ nano calci.txt
+
+arunk@DESKTOP-F9U8PUD MINGW64 /d/Calculator
+$ git init
+Initialized empty Git repository in D:/Calculator/.git/
+
+arunk@DESKTOP-F9U8PUD MINGW64 /d/Calculator (master)
+$ git remote add origin https://github.com/arunkumarbs97/calculator.git
+
+arunk@DESKTOP-F9U8PUD MINGW64 /d/Calculator (master)
+$ git add .
+warning: LF will be replaced by CRLF in calci.txt.
+The file will have its original line endings in your working directory
+
+arunk@DESKTOP-F9U8PUD MINGW64 /d/Calculator (master)
+$ git commit -m "ddone"
+[master (root-commit) f546c70] ddone
+ 1 file changed, 1 insertion(+)
+ create mode 100644 calci.txt
+
+arunk@DESKTOP-F9U8PUD MINGW64 /d/Calculator (master)
+$ git push -u origin master
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 212 bytes | 106.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/arunkumarbs97/calculator.git
+ * [new branch]      master -> master
+branch 'master' set up to track 'origin/master'.
+
+arunk@DESKTOP-F9U8PUD MINGW64 /d/Calculator (master)
+$ nano calci.txt
+
+arunk@DESKTOP-F9U8PUD MINGW64 /d/Calculator (master)
+$ git checkout -b addition
+Switched to a new branch 'addition'
+
+arunk@DESKTOP-F9U8PUD MINGW64 /d/Calculator (addition)
+$ ls
+calci.txt
+
+arunk@DESKTOP-F9U8PUD MINGW64 /d/Calculator (addition)
+$ cat calci.txt
+calci
+addition
+
+arunk@DESKTOP-F9U8PUD MINGW64 /d/Calculator (addition)
+$ git add .
+warning: LF will be replaced by CRLF in calci.txt.
+The file will have its original line endings in your working directory
+
+arunk@DESKTOP-F9U8PUD MINGW64 /d/Calculator (addition)
+$ git commit -m "addition done"
+[addition 78ad301] addition done
+ 1 file changed, 1 insertion(+)
+
+arunk@DESKTOP-F9U8PUD MINGW64 /d/Calculator (addition)
+$ git push -u origin addition
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Writing objects: 100% (3/3), 255 bytes | 255.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'addition' on GitHub by visiting:
+remote:      https://github.com/arunkumarbs97/calculator/pull/new/addition
+remote:
+To https://github.com/arunkumarbs97/calculator.git
+ * [new branch]      addition -> addition
+branch 'addition' set up to track 'origin/addition'.
+
+arunk@DESKTOP-F9U8PUD MINGW64 /d/Calculator (addition)
+$ git checkout -b master
+fatal: a branch named 'master' already exists
+
+arunk@DESKTOP-F9U8PUD MINGW64 /d/Calculator (addition)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+arunk@DESKTOP-F9U8PUD MINGW64 /d/Calculator (master)
+$ git merge addition
+Updating f546c70..78ad301
+Fast-forward
+ calci.txt | 1 +
+ 1 file changed, 1 insertion(+)
+
+arunk@DESKTOP-F9U8PUD MINGW64 /d/Calculator (master)
+$ git push -u origin master
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/arunkumarbs97/calculator.git
+   f546c70..78ad301  master -> master
+branch 'master' set up to track 'origin/master'.
+
+arunk@DESKTOP-F9U8PUD MINGW64 /d/Calculator (master)
+$ nano calci.txt
+
+arunk@DESKTOP-F9U8PUD MINGW64 /d/Calculator (master)
+$ git checkout -b subtraction
+Switched to a new branch 'subtraction'
+
+arunk@DESKTOP-F9U8PUD MINGW64 /d/Calculator (subtraction)
+$ git add .
+
+arunk@DESKTOP-F9U8PUD MINGW64 /d/Calculator (subtraction)
+$ git commit -m "subtraction done"
+[subtraction a307172] subtraction done
+ 1 file changed, 1 insertion(+)
+
+arunk@DESKTOP-F9U8PUD MINGW64 /d/Calculator (subtraction)
+$ git push -u origin subtraction
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Writing objects: 100% (3/3), 267 bytes | 267.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'subtraction' on GitHub by visiting:
+remote:      https://github.com/arunkumarbs97/calculator/pull/new/subtraction
+remote:
+To https://github.com/arunkumarbs97/calculator.git
+ * [new branch]      subtraction -> subtraction
+branch 'subtraction' set up to track 'origin/subtraction'.
+
+arunk@DESKTOP-F9U8PUD MINGW64 /d/Calculator (subtraction)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+arunk@DESKTOP-F9U8PUD MINGW64 /d/Calculator (master)
+$ git merge subtraction
+Updating 78ad301..a307172
+Fast-forward
+ calci.txt | 1 +
+ 1 file changed, 1 insertion(+)
+
+arunk@DESKTOP-F9U8PUD MINGW64 /d/Calculator (master)
+$ git push -u origin master
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/arunkumarbs97/calculator.git
+   78ad301..a307172  master -> master
+branch 'master' set up to track 'origin/master'.
+
+arunk@DESKTOP-F9U8PUD MINGW64 /d/Calculator (master)
+$

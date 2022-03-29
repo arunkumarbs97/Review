@@ -1,0 +1,36 @@
+1. Move files from one folder to respective folder
+sol: 
+
+touch abc.txt def.txt ghi.txt jkl.txt
+mkdir abc def ghi jkl
+mv abc.txt abc
+mv def.txt def
+mv ghi.txt ghi
+mv jkl.txt jkl
+
+
+2. Check if a folder exists or not if not create it
+Sol:
+
+[-d testdir ] && echo "Directory Exists" || mkdir testdir
+
+3. 
+i)Print EmployeeName and TotalPay who has Basepay greater than 10000
+
+awk '$4>10000{print}' data.txt | awk '{print $2 "\t" $7}'
+
+ii) Displaying the Employee Name and Base Salary
+whose Job Title is Captain
+
+cat data.txt | grep CAPTAIN | awk '{sum+=$4}END{print sum}'
+
+iii) Print JobTitle and Overtime pay who has overtime pay is between 7000 and 10000
+
+awk '$5>7000{print}' data.txt | awk '$5<10000{print}' | awk '{print $1 "\t" $5}'
+
+iv) Print Average basepay
+
+awk '{sum+=$4} END { print "Average = ",sum/NR}' data.txt
+
+
+ 

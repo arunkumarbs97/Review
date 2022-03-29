@@ -1,0 +1,118 @@
+1. Use Random Function (( RANDOM )) to get Single Digit
+Code:
+
+Single_Digit=$((RANDOM%10))
+echo "Single Digit numer is" $Single_Digit
+
+2. Use Random to get Dice Number between 1 to 6
+Code:
+
+dicenumber=$((1+RANDOM%6))
+echo "Dice number is" $dicenumber
+
+3. Add two Random Dice Number and Print the Result
+Code:
+
+dicenumber1=$((1+RANDOM%6))
+echo "Dice number 1 is" $dicenumber1
+
+dicenumber2=$((1+RANDOM%6))
+echo "Dice number 2 is" $dicenumber2
+
+sum=$(($dicenumber1+$dicenumber2))
+echo "Sum of two random dice number is" $sum
+
+4. Write a program that reads 5 Random 2 Digit values , then find their
+sum and the average
+Code:
+
+$ cat test.sh
+DIFF=$((99-10+1))
+random1=$(($(($RANDOM%$DIFF))+10))
+
+echo "Random number 1 is" $random1
+
+DIFF=$((99-10+1))
+random2=$(($(($RANDOM%$DIFF))+10))
+
+echo "Random number 2 is" $random2
+
+DIFF=$((99-10+1))
+random3=$(($(($RANDOM%$DIFF))+10))
+
+echo "Random number 3 is" $random3
+
+DIFF=$((99-10+1))
+random4=$(($(($RANDOM%$DIFF))+10))
+
+echo "Random number 4 is" $random4
+
+DIFF=$((99-10+1))
+random5=$(($(($RANDOM%$DIFF))+10))
+
+echo "Random number 5 is" $random5
+
+sum=$(($random1+$random2+$random3+$random4+$random5))
+echo "Sum of all 5 Random number is" $sum
+
+5. Unit Conversion
+
+a. 1ft = 12 in then 42 in = ? ft
+Code:
+
+oneft=12
+echo "1 feet is equal to "$oneft
+
+inch=42
+feet=$(($inch/12 | bc -l))
+echo "42 inches is equal to "$feet "feet"
+
+b. Rectangular Plot of 60 feet x 40 feet in meters
+Code:
+
+leninmeter=$((60 * 23/76))
+widinmeter=$((40 * 23/76))
+echo "Rectangluar plot of 60 feet x 40 feet in meters is" $leninmeter "x" $widinmeter
+
+Selection Practice Problems with if & else
+
+2. Write a program that takes day and month from the command line and prints true if
+day of month is between March 20 and June 20, false otherwise.
+Code:
+
+read -p " Enter Date:-" date
+read -p " Enter Month:-" Month
+
+if (( ($Month <= 6 && $date <= 20) && (($Month >= 3 && $date >=20) && ($date<31)) ))
+then
+        echo $Month $date "True";
+else
+
+        echo "False";
+fi
+
+
+3.Leap year Program
+Code:
+
+read -p "Enter your year: " year
+
+if((  $year %400 == 0 || $year %4 == 0 && $year %100!=0 ))
+then
+echo "Leap year"
+else
+echo "Not leap year"
+fi
+
+
+4. Write a program to simulate a coin flip and print out "Heads" or "Tails" accordingly.
+Code:
+
+flipcoin=$(($RANDOM%2))
+if (( $flipcoin == 1 ))
+then
+    echo "heads"
+else
+    echo "tails"
+fi
+

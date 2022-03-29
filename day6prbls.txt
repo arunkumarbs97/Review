@@ -1,0 +1,52 @@
+1. Prime numbers check
+
+Prime=1
+
+for(( i=2 ; i<$num/2 ; i++ ))
+do
+    if(( $num % $i == 0))
+    then
+   Prime=0
+     break
+      fi
+done
+
+if(( $Prime == 0 ))
+then
+  echo "Not Prime"
+else
+ echo "Prime"
+
+fi
+
+2. Facotorial
+
+read -p "Enter number: " num
+factorial=1
+for((i=$num;i>=1;i--))
+do
+factorial=$(($i*$factorial)) 
+done
+
+3. Find prime numbers between range
+
+read -p "Enter Start range " num1
+read -p "Enter END range " num2
+
+echo "Prime number between" $num1 " " $num2 "are"
+
+for((i=$num1+1; i<=$num2; ++i ))
+do
+count=0
+for((j=2;j<=i/2;++j))
+do
+if((i%j==0))
+then
+count=1
+break
+fi
+done
+if((count==0))
+then
+echo $i
+fi
